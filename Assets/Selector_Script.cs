@@ -29,8 +29,19 @@ public class Selector_Script : MonoBehaviour
 		switch(CharacterInt)
 		{
 			case 1:
+				FemaleRenderer.enabled = false;
+				Female.transform.position = OffScreen;
+				Male.transform.position = CharacterPosition;
+				MaleRenderer.enabled = true;
+				CharacterInt++;
 				break;
 			case 2:
+				MaleRenderer.enabled = false;
+				Male.transform.position = OffScreen;
+				Female.transform.position = CharacterPosition;
+				FemaleRenderer.enabled = true;
+				CharacterInt++;
+				ResetInt();
 				break;
 			default:
 				break;
